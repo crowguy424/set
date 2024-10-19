@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url('bd.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.cursor{
+    position: absolute;
+    left: 40px;
+    pointer-events: none;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    
+}
+
+.cursor span{
+    position: absolute;
+    width: 12px;
+    height: 60px;
+    background: #496f2d;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-top: 60px solid #496f2d;
+    border-bottom: 100px solid #496f2d;
+}
+
+.cursor span:nth-child(6){
+    z-index: 1000;
+}
+
+.cursor span:nth-child(6)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: url('icon.png');
+    background-size: cover;
+    animation: animate 20s linear infinite;
+
+}
+
